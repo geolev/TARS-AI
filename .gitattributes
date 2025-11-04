@@ -1,1 +1,5 @@
 .DS_Store merge=ours
+.Spotlight-V100 merge=ours
+.Trashes merge=ours
+.AppleDouble merge=ours
+._* merge=ours
