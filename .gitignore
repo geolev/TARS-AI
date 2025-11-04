@@ -204,3 +204,6 @@ character/
 
 src/modules/UI/ui_layout.json
 /src/modules/UI/ui_layout.json.DS_Store
+.vscode/
+TARS-AI.code-workspace
+src/requirements-mac.txt
