@@ -207,3 +207,6 @@ src/modules/UI/ui_layout.json
 .vscode/
 TARS-AI.code-workspace
 src/requirements-mac.txt
+.vscode/
+TARS-AI.code-workspace
+src/requirements-mac.txt
