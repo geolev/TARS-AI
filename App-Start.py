@@ -58,7 +58,8 @@ def run_tars_ai_fullscreen():
 
     if ui_enabled:
         print("[CONFIG] UI is enabled, launching app directly...")
-        command = "cd src && source .venv/bin/activate && python app.py"
+        #command = "cd src && source .venv/bin/activate && python app.py"
+        command = "cd src && . /home/admin/Projects/TARS-AI/.venv/bin/activate && python app.py"
         subprocess.run(command, shell=True, executable="/bin/bash")
         return
 
@@ -110,7 +111,8 @@ def run_tars_ai_fullscreen():
     is_listening = False
     listening_animation_frame = 0
 
-    command = "cd src && source .venv/bin/activate && python app.py"
+    #command = "cd src && source .venv/bin/activate && python app.py"
+    command = "cd src && . /home/admin/Projects/TARS-AI/.venv/bin/activate && python app.py"
     process = subprocess.Popen(
         command,
         shell=True,
@@ -405,7 +407,8 @@ def run_tars_ai_normal():
 
     command = (
         "cd src && "
-        "source .venv/bin/activate && "
+        #"source .venv/bin/activate && "
+        ". /home/admin/Projects/TARS-AI/.venv/bin/activate && "
         "python app.py show_ui=false"
     )
 

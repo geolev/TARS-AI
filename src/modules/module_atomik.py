@@ -15,7 +15,9 @@ import sys
 from scipy.fftpack import dct
 
 class VoiceActivityDetector:
-    def __init__(self, sample_rate=16000, energy_threshold=0.008, silence_duration=0.5):
+    #def __init__(self, sample_rate=16000, energy_threshold=0.008, silence_duration=0.5):
+    # 11/09/2025 Change the energy_threshold to see if we can wake TARS.
+    def __init__(self, sample_rate=16000, energy_threshold=0.004, silence_duration=0.5):
         self.sample_rate = sample_rate
         self.energy_threshold = energy_threshold
         self.silence_frames = int(silence_duration * sample_rate / 1024)
@@ -102,7 +104,9 @@ class MFCCExtractor:
         return (mfcc - np.mean(mfcc, axis=0)) / (np.std(mfcc, axis=0) + 1e-8)
 
 class WakeWordSystem:
-    def __init__(self, wake_word="hey tars", sample_rate=16000, threshold=0.6, augment_data=True):
+    #def __init__(self, wake_word="hey tars", sample_rate=16000, threshold=0.6, augment_data=True):
+    # 11/09/2025 Adjusting threshold to make TARS wakeup.
+    def __init__(self, wake_word="hey tars", sample_rate=16000, threshold=0.4, augment_data=True):
         self.wake_word = wake_word
         self.sample_rate = sample_rate
         self.threshold = threshold

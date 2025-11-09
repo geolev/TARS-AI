@@ -210,3 +210,70 @@ src/requirements-mac.txt
 .vscode/
 TARS-AI.code-workspace
 src/requirements-mac.txt
+
+# Max recommended files to ignore:
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.venv/
+.env
+*.log
+*.pid
+*.swp
+.DS_Store
+
+# --- System / Editor ---
+.vscode/
+.idea/
+*.bak
+*.tmp
+*~
+nohup.out
+
+# --- Audio / Speech Data ---
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+# --- Models & Caches ---
+stt/vosk-model*
+stt/whisper/
+stt/silero*
+stt/fastrtc*
+stt/tmp/
+tts/cache/
+torch_cache/
+__torch_cache__/
+onnx_models/
+.huggingface/
+.cache/
+.hf_cache/
+pvporcupine/
+pvrecorder/
+
+# --- Local Configs (keep template only) ---
+src/config.ini
+!src/config.ini.template  # allow the template version
+
+# --- Runtime / Logs ---
+hailort.log
+*.jsonl
+*.db
+*.sqlite
+*.pkl
+*.json.tmp
+*.bak
+*.out
+
+# --- System and Desktop Junk ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+lost+found/
+*.Trash-*/
